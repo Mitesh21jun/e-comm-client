@@ -35,6 +35,7 @@ const AddCategory: React.FC = () => {
           <label>Name:</label><br />
           <input name="name" value={name}
             style={{
+              color: '#000000',
               width: '100%',
               padding: '10px 12px',
               borderRadius: 6,

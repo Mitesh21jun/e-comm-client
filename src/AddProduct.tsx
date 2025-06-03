@@ -12,10 +12,11 @@ interface ProductForm {
   price: number;
   discount?: number;
   category: string;
+  image: string;
 }
 
 const AddProduct: React.FC = () => {
-  const [form, setForm] = useState<ProductForm>({ name: '', description: '', price: 0, discount: 0, category: '' });
+  const [form, setForm] = useState<ProductForm>({ name: '', description: '', price: 0, discount: 0, category: '', image: '' });
   const [categories, setCategories] = useState<Category[]>([]);
   const [loading, setLoading] = useState(false);
   const [added, setAdded] = useState(false);
@@ -38,7 +39,7 @@ const AddProduct: React.FC = () => {
         body: JSON.stringify({ ...form, price: Number(form.price), discount: Number(form.discount) }),
       });
       if (!res.ok) throw new Error('Failed to add product');
-      setForm({ name: '', description: '', price: 0, discount: 0, category: '' });
+      setForm({ name: '', description: '', price: 0, discount: 0, category: '', image: '' });
       setAdded(true);
       setTimeout(() => setAdded(false), 2000);
     } catch {
@@ -62,6 +63,7 @@ const AddProduct: React.FC = () => {
             autoFocus
             placeholder="Product name"
             style={{
+              color: '#000000',
               width: '100%',
               padding: '10px 12px',
               borderRadius: 6,
@@ -84,6 +86,7 @@ const AddProduct: React.FC = () => {
             onChange={handleChange}
             placeholder="Description"
             style={{
+              color: '#000000',
               width: '100%',
               padding: '10px 12px',
               borderRadius: 6,
@@ -109,6 +112,7 @@ const AddProduct: React.FC = () => {
             required
             placeholder="0"
             style={{
+              color: '#000000',
               width: '100%',
               padding: '10px 12px',
               borderRadius: 6,
@@ -134,6 +138,30 @@ const AddProduct: React.FC = () => {
             onChange={handleChange}
             placeholder="0"
             style={{
+              color: '#000000',
+              width: '100%',
+              padding: '10px 12px',
+              borderRadius: 6,
+              border: '1px solid #bfc8e6',
+              fontSize: 16,
+              background: '#f7f9fc',
+              marginTop: 4,
+              marginBottom: 0,
+              outline: 'none',
+              transition: 'border 0.2s',
+              boxSizing: 'border-box',
+            }}
+          />
+        </div>
+        <div style={{ marginBottom: 18 }}>
+          <label style={{ fontWeight: 500, color: '#2a4d8f', marginBottom: 6, display: 'block' }}>Image URL:</label>
+          <input
+            name="image"
+            value={form.image}
+            onChange={handleChange}
+            placeholder="Enter image URL"
+            style={{
+              color: '#000000',
               width: '100%',
               padding: '10px 12px',
               borderRadius: 6,
@@ -156,6 +184,7 @@ const AddProduct: React.FC = () => {
             onChange={handleChange}
             required
             style={{
+              color: '#000000',
               width: '100%',
               padding: '10px 12px',
               borderRadius: 6,

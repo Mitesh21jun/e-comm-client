@@ -133,7 +133,8 @@ const Navbar: React.FC = () => {
           width: 40,
           height: 40,
           padding: 0,
-          margin: "0 50",
+          margin: "0 0 0 0",
+          transform: "translateX(-110%)",
           cursor: "pointer",
           position: "relative",
           boxShadow: "0 2px 8px #0001",
@@ -186,15 +187,15 @@ function App() {
     <>
       <Navbar />
       <div style={{ marginTop: 80, padding: "0 16px" }}>
-        <h1 style={{ color: "#2a4d8f", textAlign: "center" }}>Welcome to E-Comm Store</h1>
+        <h1 style={{ color: "#2a4d8f", textAlign: "center" }}>
+          Welcome to E-Comm Store
+        </h1>
         <p style={{ textAlign: "center", color: "#555" }}>
           Explore our products and add them to your cart!
         </p>
 
         <hr style={{ margin: "16px 0", borderColor: "#b3c6f7" }} />
-        <div style={{ maxWidth: 1200, margin: "10 auto" }}/>
-        
-
+        <div style={{ maxWidth: 1200, margin: "10 auto" }} />
       </div>
       <Routes>
         <Route

@@ -91,6 +91,7 @@ const OrderForm: React.FC = () => {
             autoFocus
             placeholder="Your name"
             style={{
+              color: '#000000',
               width: '100%',
               padding: '10px 12px',
               borderRadius: 6,
@@ -115,6 +116,7 @@ const OrderForm: React.FC = () => {
             type="email"
             placeholder="Email"
             style={{
+              color: '#000000',
               width: '100%',
               padding: '10px 12px',
               borderRadius: 6,
@@ -138,6 +140,7 @@ const OrderForm: React.FC = () => {
             required
             placeholder="Address"
             style={{
+              color: '#000000',
               width: '100%',
               padding: '10px 12px',
               borderRadius: 6,

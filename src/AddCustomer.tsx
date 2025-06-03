@@ -39,6 +39,7 @@ const AddCustomer: React.FC = () => {
           <label>Name:</label><br />
           <input name="name"
             style={{
+              color: '#000000',
               width: '100%',
               padding: '10px 12px',
               borderRadius: 6,
@@ -56,6 +57,7 @@ const AddCustomer: React.FC = () => {
           <label>Email:</label><br />
           <input name="email"
             style={{
+              color: '#000000',
               width: '100%',
               padding: '10px 12px',
               borderRadius: 6,
@@ -74,6 +76,7 @@ const AddCustomer: React.FC = () => {
           <label>Address:</label><br />
           <input name="address"
             style={{
+              color: '#000000',
               width: '100%',
               padding: '10px 12px',
               borderRadius: 6,
